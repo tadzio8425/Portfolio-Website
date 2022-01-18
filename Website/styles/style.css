@@ -10,6 +10,7 @@ html{
     color: white;
     font-family: "Source-Sans-Pro";
     height: 100%;
+    scroll-padding-top: 70px;
     
 }
 
@@ -48,12 +49,16 @@ body{
     grid-template-rows: 65px 100%;
     background-color: #121212;
     height:1300px;
+    row-gap: 50px;
 }
 
 
 /*HEADER STYLING*/
 
 header{
+    position: sticky;
+    top:0;
+    z-index: 10;
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #332E33;
@@ -61,6 +66,7 @@ header{
     width:95%;
     border-bottom: 5px solid #2F2B33;
     border-right: 5px solid #2F2B33;
+    height: 65px;
 }
 
 nav{
@@ -97,7 +103,6 @@ header nav ul{
 
 /*SECTION STYLING*/
 main{
-    margin-top: 50px;
     grid-column: 1/2;
     grid-row: 2/3;
 
