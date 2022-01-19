@@ -1,14 +1,20 @@
 /*MAIN STYLING*/
 
 @font-face{
-    font-family: "Source-Sans-Pro";
+    font-family: "Source-Sans-Pro-Semibold";
     src:url("../sources/fonts/SourceSansPro-Semibold.ttf") format("truetype");
 }
+
+@font-face{
+    font-family: "Source-Sans-Pro-Bold";
+    src:url("../sources/fonts/SourceSansPro-Bold.ttf") format("truetype");
+}
+
 
 html{
     font-size: 16px;
     color: white;
-    font-family: "Source-Sans-Pro";
+    font-family: "Source-Sans-Pro-Semibold";
     scroll-padding-top: 70px;
 
 }
@@ -29,6 +35,20 @@ h2{
     background-color: hsl(233, 49%, 47%);
     border: 2px solid hsl(233, 52%, 47%);
 }
+
+h3{
+    font-size: 1.3em;
+    text-align: center;
+    color:#121212;
+    font-family: "Source-Sans-Pro-Bold";
+}
+
+h4{
+    font-size: 1.3em;
+    text-align: center;
+    color:#121212;
+}
+
 
 p{
     text-align: justify;
@@ -273,12 +293,6 @@ section#contact-section{
 
 
 
-/*SPECIFIC STYLING projects-section*/
-#projects-section img{
-    width: auto;
-    height: 25%;
-}
-
 
 /*SPECIFIC STYLING contact-section*/
 
@@ -293,6 +307,38 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+
+/*Splide*/
+.splide{
+    width: 100%;
+    height: 100%;
+}
+
+
+.splide__track{
+    width: 100%;
+    height: 100%;  
+}
+
+.splide__slide div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.project-card img{
+    width: 250px;
+    height: 250px;
+    border-radius: 70px;
+    margin-bottom: 10px;
+}
+
 
 
 
@@ -362,7 +408,7 @@ footer{
 
         main{
             grid-template-rows: 3.5fr 3fr 1fr 3fr 1fr 3fr 1fr 3fr;
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             row-gap: 80px;
         }
 
@@ -495,6 +541,8 @@ footer{
             margin-bottom: 80px;
             padding: 0px 10px;
         }
+
+        
 
 
         }

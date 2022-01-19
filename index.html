@@ -8,8 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles/reset.css" rel="stylesheet">
         <link href="./styles/style.css" rel="stylesheet">
-        <script src="./scripts/main.js" defer></script>
-        
+        <script type="module" src="./scripts/main.js" defer></script>
+
+        <script src="./scripts/splide-3.6.9/dist/js/splide.min.js"></script>
+        <link rel="stylesheet" href="./scripts/splide-3.6.9/dist/css/splide.min.css">
+
     </head>
 
     <body>
@@ -44,6 +47,22 @@
             </section>
             <img id="projects-image" src="./sources/images/projects.png" alt="Projects">
             <section id="projects-section">
+                <div class="splide">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li id="hal-9000-webserver" class="splide__slide">
+                                <div class="project-card">
+                                    <img class="project-imag"e src="./sources/images/hal-900-webserver.jpg" alt="Hal-9000 Webserver Index Page Screenshot">
+                                    <h3 class="project-name">HAL-9000</h3>
+                                    <h4 class="project-tech">Media Webserver</h4>
+                                </div> 
+                                 
+                              </li>
+                              <li class="splide__slide">Slide 02</li>
+                              <li class="splide__slide">Slide 03</li>
+                          </ul>
+                    </div>
+                  </div>
             </section> 
 
             <section id="skills-section"></section>
@@ -58,5 +77,7 @@
         <footer style="opacity: 0.95; font-size: 14px;">
             <p>Made with <span class=heart style="color:red;"> ♥ </span> in Bogotá</p></footer>
     </body>
+
+    <script src="scripts/splide-handler.js"></script>
 
 </html>

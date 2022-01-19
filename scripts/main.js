@@ -1,11 +1,9 @@
+import Splide from "./splide-3.6.9/dist/js/splide.esm.js"
 ///////////////////////////////////////////////////////////////////////
 // Mobile version query handler
 //////////////////////////////////////////////////////////////////////
-
 let main = document.getElementById("main");
 let presentationCard = document.querySelector(".presentation-card").cloneNode(true);
-
-
 function addPresentationToMobile(event){
     if(event.matches){
         presentationCard.style.gridColumn = "1 / 2";
@@ -13,22 +11,17 @@ function addPresentationToMobile(event){
         presentationCard.style.display = "block";
         presentationCard.setAttribute("id", "about-me-image");
         main.appendChild(presentationCard);
-
         //Change anchors
         changeAnchors(true);
     }
-
     else{
         main.removeChild(presentationCard);
         //Return original anchors
         changeAnchors(false);
     }
-
 }
-
 function changeAnchors(toMobile){
     let anchorUl = document.getElementById("ul-nav");
-
     for(let li of anchorUl.children){
         let anchor = li.firstChild;
         let href = anchor.getAttribute("href");
@@ -45,11 +38,10 @@ function changeAnchors(toMobile){
         anchor.setAttribute("href", newHref);
     }
 }
-
-
-
 let mobileMediaQuery = window.matchMedia("(max-width: 700px)");
 mobileMediaQuery.addEventListener("change", addPresentationToMobile);
-
-
 addPresentationToMobile(mobileMediaQuery);
+
+///////////////////////////////////////////////////////////////////////
+// Splice creator
+//////////////////////////////////////////////////////////////////////
