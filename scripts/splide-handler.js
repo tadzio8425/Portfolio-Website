@@ -3,9 +3,12 @@ var splide = new Splide( '.splide', {
     perPage: 3,
     perMove: 1,
     breakpoints: {
-		700: {
+		800: {
             perPage:1,
 		},
+            1150:{
+                  perPage:2,
+		},         
      }});
 
 splide.mount();
