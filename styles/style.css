@@ -221,8 +221,17 @@ section#contact-section{
     border-radius: 70px;
     border: 10px solid #01c29a;
     margin-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
 }
 
+section img:hover{
+    cursor: pointer;
+}
 
 
 /*SPECIFIC STYLING about-me-section*/
@@ -305,7 +314,30 @@ section#contact-section{
 
 
 /*SPECIFIC STYLING contact-section*/
+#contact-section h3{
+    font-size: 1.5em;
+    color: hsl(168, 99%, 15%);
+}
 
+#contact-section div{
+    display: flex;
+    column-gap: 35px;
+    align-items: center;
+}
+
+
+img#github-contact{
+    height: auto;
+    width: 65px;
+}
+img#linkedin-contact{
+    height: auto;
+    width: 70px;
+}
+img#mail-contact{
+    height: auto;
+    width: 60px;
+}
 
 
 /*Footer Styling*/
