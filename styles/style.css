@@ -377,7 +377,15 @@ footer{
     height: 250px;
     border-radius: 70px;
     margin-bottom: 10px;
+    box-shadow:3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 400ms linear 0ms;
 }
+.project-card img:hover{
+    filter: brightness(88%);
+}
+
+
+
 
 img#python-skill{
     width: 75px;
@@ -412,7 +420,9 @@ img#git-skill{
     height: auto;
     width: 65px;
 }
-
+.skill-image:hover{
+    filter:brightness(88%);
+}
 
 
 
