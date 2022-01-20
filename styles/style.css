@@ -137,8 +137,7 @@ main{
     display: grid;
     grid-template-rows: 3.6fr 3fr 2fr 3fr;
     grid-template-columns: 30% 1fr 1fr 1fr;
-    row-gap: 80px;
-    
+    row-gap: 80px;    
 }
 
 section{
@@ -370,6 +369,10 @@ footer{
     height: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.project-card{
+    transition: transform 650ms ease-out 0s, opacity 650ms ease 0s;
 }
 
 .project-card img{

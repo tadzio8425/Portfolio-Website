@@ -1,4 +1,3 @@
-import Splide from "./splide-3.6.9/dist/js/splide.esm.js"
 ///////////////////////////////////////////////////////////////////////
 // Mobile version query handler
 //////////////////////////////////////////////////////////////////////
@@ -15,7 +14,9 @@ function addPresentationToMobile(event){
         changeAnchors(true);
     }
     else{
-        main.removeChild(presentationCard);
+        try{
+        main.removeChild(presentationCard);}
+        catch{console.log("ERROR-REMOVING-PRESENTATION-CARD")}
         //Return original anchors
         changeAnchors(false);
     }
@@ -43,5 +44,29 @@ mobileMediaQuery.addEventListener("change", addPresentationToMobile);
 addPresentationToMobile(mobileMediaQuery);
 
 ///////////////////////////////////////////////////////////////////////
-// Splice creator
+// Click-On Project Handler
 //////////////////////////////////////////////////////////////////////
+function returnShadow(image, shadow){
+    image.style.boxShadow = shadow;
+}
+
+
+
+function showProject(event){
+    let specificImage = event.target;
+    let specificProject = specificImage.parentElement;
+    let projectSection = document.getElementById("projects-section");
+
+    //Shadow transition on click (affects only the image)
+    let previousShadow = specificImage.style.boxShadow;
+    specificImage.style.boxShadow = "none";
+    setTimeout(returnShadow.bind(null, specificImage, previousShadow), 1000);
+
+    // // Project Expansion // // 
+
+}
+
+let projectImages = document.getElementsByClassName("project-image");
+for(let projectImage of projectImages){
+    projectImage.addEventListener("click", showProject);
+}
