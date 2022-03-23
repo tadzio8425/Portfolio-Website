@@ -636,6 +636,33 @@ img#git-skill{
 
         }
 
+        @media screen and (min-width: 1920px) {
+
+
+            html{
+                height:100%
+            }
+
+            body{
+                height: 100%;
+            }
+
+            main{
+                grid-template-rows: 2fr 3fr 2fr 3fr;
+                max-width: 1920px;
+                justify-self: center;
+                row-gap: 160px;
+                
+            }
+
+            section#about-me-section{
+
+                max-height: 438.29px;
+            }
+
+
+        }
+
 
 
     
